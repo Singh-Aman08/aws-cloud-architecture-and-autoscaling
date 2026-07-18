@@ -83,3 +83,59 @@ The methodology involved:
 
 - **Architecture optimisation:** Alternative approaches such as AWS Lambda and Amazon EMR-based processing frameworks were analysed to improve cost efficiency, scalability, and fault tolerance.
 
+## Results and Architecture Outcomes
+
+The project resulted in two scalable AWS-based application architectures designed to address different cloud computing requirements: AI-powered image processing and distributed data processing.
+
+---
+
+## 1. ArtAI Architecture Result
+
+The final ArtAI architecture provides a secure, highly available, and scalable platform for AI-based image processing.
+
+Key outcomes:
+
+- Designed a globally accessible application using Amazon Route 53 and CloudFront for low-latency user access.
+- Implemented secure AI model deployment using EC2 instances inside a private VPC.
+- Enabled scalable inference processing using Elastic Load Balancing and Auto Scaling.
+- Used Amazon S3 for durable image storage with lifecycle-based backup to S3 Glacier.
+- Integrated DynamoDB for efficient metadata management.
+- Applied IAM roles, Cognito authentication, and network security controls to protect application resources.
+
+### ArtAI AWS Architecture
+
+![ArtAI AWS Architecture](images/artai_architecture.png)
+
+---
+
+## 2. WordFreq Architecture Result
+
+The final WordFreq architecture transformed a single-worker application into a scalable distributed processing system using AWS services.
+
+Key outcomes:
+
+- Developed an event-driven processing workflow using Amazon S3 and SQS.
+- Enabled asynchronous job processing through message queues.
+- Implemented EC2-based worker scaling using CloudWatch metrics and Auto Scaling Groups.
+- Achieved improved processing performance through parallel execution.
+- Evaluated different scaling configurations to optimise workload handling.
+
+### WordFreq AWS Architecture
+
+![WordFreq AWS Architecture](images/wordfreq_architecture.png)
+
+---
+
+## Performance Highlights
+
+Load testing demonstrated that increasing processing capacity significantly improved performance.
+
+| Experiment | Result |
+|------------|--------|
+| Increased worker instances | Reduced overall processing time through parallel processing |
+| Reduced cooldown period | Faster response to workload changes |
+| Reduced monitoring interval | Improved scaling responsiveness |
+| Larger EC2 instances | Improved computation performance |
+
+The best observed configuration achieved a processing time of **3 minutes 45 seconds** using a larger EC2 instance type, demonstrating the impact of resource scaling on distributed workloads.
+
