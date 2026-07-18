@@ -117,3 +117,12 @@ The ArtAI architecture showed how AWS services can be combined to build a secure
 The WordFreq architecture demonstrated the use of cloud-native services to build an event-driven distributed processing system with workload-based auto-scaling. The performance evaluation highlighted how appropriate scaling strategies and infrastructure choices can improve efficiency and responsiveness.
 
 Overall, this project provided practical experience in cloud architecture design, AWS infrastructure management, distributed systems, auto-scaling, and performance optimisation for scalable applications.
+
+## Repository Structure
+
+```text
+.
+├── ArtAI_AWS_Architecture.png      # AWS architecture diagram for the ArtAI AI image processing application
+├── WordFreq_AWS_Architecture.png   # AWS architecture diagram for the WordFreq distributed data processing application
+├── Report.pdf                      # Detailed project report containing implementation details and performance evaluation
+└── README.md                       # Project documentation and overview
