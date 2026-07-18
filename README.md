@@ -139,3 +139,13 @@ Load testing demonstrated that increasing processing capacity significantly impr
 
 The best observed configuration achieved a processing time of **3 minutes 45 seconds** using a larger EC2 instance type, demonstrating the impact of resource scaling on distributed workloads.
 
+## Conclusion
+
+This project demonstrated the design and optimisation of scalable cloud architectures using AWS for both AI-powered applications and distributed data processing systems.
+
+The ArtAI architecture showed how AWS services can be combined to build a secure, highly available, and scalable AI image processing platform with reliable storage, authentication, monitoring, and automated backup mechanisms.
+
+The WordFreq architecture demonstrated the implementation of an event-driven distributed processing pipeline using AWS services such as S3, SQS, EC2, DynamoDB, CloudWatch, and Auto Scaling. The scaling experiments highlighted how workload-based resource management can improve application performance and cost efficiency.
+
+Overall, the project provided practical experience in cloud architecture design, AWS infrastructure management, distributed computing, auto-scaling strategies, and performance optimisation for scalable applications.
+
