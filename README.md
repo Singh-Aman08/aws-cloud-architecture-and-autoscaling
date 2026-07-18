@@ -1,2 +1,1 @@
-# aws-cloud-architecture-and-autoscaling
-AWS cloud architecture project demonstrating distributed processing, workload-based scaling, monitoring, and serverless optimisation.
+# Designing Scalable AWS Architectures for ArtAI (AI Image Processing) and WordFreq (Distributed Data Processing) Applications
