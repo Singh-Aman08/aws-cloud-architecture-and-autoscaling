@@ -26,3 +26,60 @@ The main objectives of this project were:
 - **Optimise cloud architecture:** Explore improvements using serverless and distributed processing solutions to enhance resilience, cost efficiency, and scalability.
 
 - **Apply cloud security best practices:** Utilise AWS IAM, VPC networking, authentication mechanisms, and encryption strategies to protect application resources and data.
+
+## Methodology
+
+The project methodology involved designing, implementing, and evaluating two AWS-based application architectures. Each architecture followed a structured approach of requirement analysis, AWS service selection, system design, deployment/scaling strategy, and performance evaluation.
+
+---
+
+## 1. ArtAI Architecture Methodology (AI-Powered Image Processing)
+
+The ArtAI architecture was designed by first identifying the requirements of a global AI image processing service, including low-latency access, secure AI model deployment, high availability, and automated data management.
+
+The methodology involved:
+
+- **Requirement analysis:** Identifying key application requirements such as worldwide accessibility, secure model hosting, scalable inference capability, and reliable image storage.
+
+- **AWS service selection:** Selecting suitable AWS services based on their role in the application:
+  - Amazon CloudFront and Route 53 for global access and traffic routing.
+  - Elastic Load Balancer and Auto Scaling for handling variable user demand.
+  - Amazon EC2 for hosting the AI inference model.
+  - Amazon S3 for storing uploaded and generated images.
+  - DynamoDB for storing image metadata.
+  - Cognito and IAM for authentication and access control.
+
+- **Secure architecture design:** The AI model was placed inside private EC2 instances within a VPC to prevent direct public access. Security groups, IAM roles, and controlled service communication were considered to protect application resources.
+
+- **Data backup strategy:** S3 lifecycle policies were designed to automatically move older images to S3 Glacier for long-term archival and recovery.
+
+- **Monitoring and reliability:** CloudWatch monitoring and alarms were incorporated to track application usage and trigger notifications during high request volumes.
+
+---
+
+## 2. WordFreq Architecture Methodology (Distributed Text Processing)
+
+The WordFreq architecture methodology focused on transforming a single-worker processing system into a scalable distributed processing pipeline.
+
+The methodology involved:
+
+- **Initial architecture deployment:** Setting up the core AWS infrastructure:
+  - Amazon S3 for file storage.
+  - Amazon SQS for asynchronous job handling.
+  - Amazon EC2 for running worker instances.
+  - Amazon DynamoDB for storing processing results.
+
+- **Event-driven workflow design:** Implementing an event-based pipeline where file uploads to S3 generate messages in SQS, allowing EC2 workers to process files independently.
+
+- **Auto-scaling implementation:** Designing workload-based scaling using the SQS queue length metric:
+  - CloudWatch monitored the number of pending processing jobs.
+  - Auto Scaling Groups dynamically launched or terminated EC2 worker instances based on workload.
+
+- **Performance evaluation:** The system was tested with multiple text files to analyse:
+  - Scaling capacity impact.
+  - Cooldown period optimisation.
+  - CloudWatch evaluation frequency.
+  - EC2 instance type performance.
+
+- **Architecture optimisation:** Alternative approaches such as AWS Lambda and Amazon EMR-based processing frameworks were analysed to improve cost efficiency, scalability, and fault tolerance.
+
