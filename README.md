@@ -70,7 +70,7 @@ Key outcomes:
 
 ### ArtAI AWS Architecture
 
-![ArtAI AWS Architecture](images/artai_architecture.png)
+![ArtAI AWS Architecture](ArtAI_AWS_Architecture.png)
 
 ---
 
@@ -88,7 +88,7 @@ Key outcomes:
 
 ### WordFreq AWS Architecture
 
-![WordFreq AWS Architecture](images/wordfreq_architecture.png)
+![WordFreq AWS Architecture](WordFreq_AWS_Architecture.png)
 
 ---
 
@@ -126,3 +126,9 @@ Overall, this project provided practical experience in cloud architecture design
 ├── WordFreq_AWS_Architecture.png   # AWS architecture diagram for the WordFreq distributed data processing application
 ├── Report.pdf                      # Detailed project report containing implementation details and performance evaluation
 └── README.md                       # Project documentation and overview
+```
+## Author
+
+**Aman Kumar Singh**  
+MSc Data Science  
+University of Bristol
