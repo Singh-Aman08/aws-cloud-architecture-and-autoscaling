@@ -1,4 +1,4 @@
-# Designing Scalable AWS Architectures for ArtAI (AI Image Processing) and WordFreq (Distributed Data Processing) Applications
+# AWS Cloud Architecture Design for Scalable AI and Data Processing Applications
 ## Overview
 
 This project demonstrates the design and optimisation of scalable cloud architectures using **Amazon Web Services (AWS)** for two different application scenarios.
